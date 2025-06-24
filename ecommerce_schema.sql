@@ -50,3 +50,29 @@ CREATE TABLE Payments (
     amount DECIMAL(10, 2),
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
 );
+
+-- Sample Data Inserts
+
+-- Insert sample customers
+INSERT INTO Customers (name, email, phone, address)
+VALUES 
+('Sriram', 'sriram@example.com', '1234567890', 'Hyderabad'),
+('Aarav', 'aarav@example.com', '9876543210', 'Bangalore');
+
+-- Insert sample products
+INSERT INTO Products (name, description, price, stock)
+VALUES 
+('Keyboard', 'Mechanical Keyboard', 1500.00, 50),
+('Mouse', 'Wireless Mouse', 700.00, 100);
+
+-- Insert sample orders
+INSERT INTO Orders (customer_id, status)
+VALUES (1, 'Placed');
+
+-- Insert sample order items
+INSERT INTO Order_Items (order_id, product_id, quantity, price)
+VALUES (1, 1, 2, 3000.00); -- 2 Keyboards
+
+-- Insert sample payment
+INSERT INTO Payments (order_id, payment_method, amount)
+VALUES (1, 'UPI', 3000.00);
