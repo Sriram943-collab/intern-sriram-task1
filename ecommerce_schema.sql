@@ -1,4 +1,9 @@
-
+Drop the table if it already exists to avoid duplicate primary key errors
+DROP TABLE IF EXISTS Customers;
+DROP TABLE IF EXISTS Products;
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Order_Items;
+DROP TABLE IF EXISTS Payments;
 -- Create Database
 CREATE DATABASE ecommerce_db;
 USE ecommerce_db;
